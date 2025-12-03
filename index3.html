@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="dashboard">
+    <div class="header">
+        <div class="brand">
+            <div class="brand-box">SD</div>
+            <div>
+                <div class="brand-text-main">Study Dashboard</div>
+                <div class="brand-text-sub">Simple • Royal • Focused</div>
+            </div>
+        </div>
+
+        <div class="nav">
+            <a href="#" class="nav-link nav-active">Home</a>
+            <a href="#scheduler" class="nav-link">Scheduler</a>
+            <a href="#brain" class="nav-link">Brain Load</a>
+            <a href="#analytics" class="nav-link">Analytics</a>
+        </div>
+
+        <div class="user-status">
+            Deep Work Mode • ON
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="column">
+            
+            <div class="card">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Today’s Study Dash</div>
+                        <div class="card-sub">One page to track your whole day</div>
+                    </div>
+                    <div class="tag">Day 07 • Streak</div>
+                </div>
+
+                <div class="hero-row">
+                    <div class="hero-text">
+                        <div class="hero-heading">
+                            Make <span class="hero-highlight">every minute</span> count.
+                        </div>
+                        <div class="hero-description">
+                            This dashboard keeps your tasks, stress and time usage in one royal, simple layout.
+                            No distractions, just clarity.
+                        </div>
+
+                        <div class="daily-quote-box">
+                            <div class="daily-quote-title">Daily Study Quote</div>
+                            <div class="daily-quote-text">
+                                “Small focused hours today become a big life tomorrow.”
+                            </div>
+                        </div>
+
+                        <div class="focus-subjects-box">
+                            <b>Today’s focus subjects:</b> DSA basics, Engineering Maths, C / C++ practice.
+                        </div>
+
+                        <div class="hero-meta-row">
+                            <div class="hero-meta-box">
+                                <div class="hero-meta-label">Tasks Completed</div>
+                                <div class="hero-meta-value">9 / 12 today</div>
+                                <div class="hero-bar">
+                                    <div class="hero-bar-fill"></div>
+                                </div>
+                            </div>
+                            <div class="hero-meta-box">
+                                <div class="hero-meta-label">Average Focus</div>
+                                <div class="hero-meta-value">47 min / session</div>
+                                <div class="hero-bar">
+                                    <div class="hero-bar-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timer-box">
+                        <div class="timer-label">Concentrate Timer</div>
+                        <div class="timer-time">25:00</div>
+                        <div class="timer-mode">
+                            Deep work block (visual only)<br>
+                            Use your phone stopwatch to match this.
+                        </div>
+                        <div class="timer-button">Start in your mind</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id="scheduler">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Task Scheduler</div>
+                        <div class="card-sub">Plan your study blocks</div>
+                    </div>
+                    <div class="tag">Today</div>
+                </div>
+
+                <table class="schedule-table">
+                    <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Task</th>
+                        <th>Tag</th>
+                        <th>Priority</th>
+                        <th>✓</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="schedule-time">06:30</td>
+                        <td>Wake • Water • Short walk</td>
+                        <td><span class="schedule-tag">mind</span></td>
+                        <td class="schedule-priority">Medium</td>
+                        <td><input type="checkbox" class="schedule-checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td class="schedule-time">08:00</td>
+                        <td>Math / DSA problems</td>
+                        <td><span class="schedule-tag">core</span></td>
+                        <td class="schedule-priority">High</td>
+                        <td><input type="checkbox" class="schedule-checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="schedule-time">11:00</td>
+                        <td>College lecture notes</td>
+                        <td><span class="schedule-tag">lecture</span></td>
+                        <td class="schedule-priority">Medium</td>
+                        <td><input type="checkbox" class="schedule-checkbox" checked></td>
+                    </tr>
+                    <tr>
+                        <td class="schedule-time">15:30</td>
+                        <td>Lab practice</td>
+                        <td><span class="schedule-tag">lab</span></td>
+                        <td class="schedule-priority">Medium</td>
+                        <td><input type="checkbox" class="schedule-checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="schedule-time">19:30</td>
+                        <td>Revision + Flashcards</td>
+                        <td><span class="schedule-tag">revision</span></td>
+                        <td class="schedule-priority">High</td>
+                        <td><input type="checkbox" class="schedule-checkbox"></td>
+                    </tr>
+                    <tr>
+                        <td class="schedule-time">22:00</td>
+                        <td>Plan tomorrow + sleep</td>
+                        <td><span class="schedule-tag">night</span></td>
+                        <td class="schedule-priority">Medium</td>
+                        <td><input type="checkbox" class="schedule-checkbox"></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card" id="brain">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Brain Load Monitor</div>
+                        <div class="card-sub">Low • Good • High stress levels</div>
+                    </div>
+                    <div class="tag">Today</div>
+                </div>
+
+                <div class="brain-row">
+                    <div class="brain-box">
+                        <div class="brain-title">Current Level</div>
+                        <div class="brain-level-pill">GOOD LOAD</div>
+                        <div class="brain-level-text">
+                            You are in the <b>learning zone</b> – your brain is working,
+                            but not overloaded. Perfect for serious study.
+                        </div>
+
+                        <div class="brain-level-row">
+                            <div class="brain-level-box">
+                                <b class="brain-low">Low</b><br>
+                                Very relaxed, maybe underused. Good for creativity,
+                                but push yourself a bit.
+                            </div>
+                            <div class="brain-level-box">
+                                <b class="brain-good">Good</b><br>
+                                Focused, active and stable. Ideal place for
+                                long-term growth.
+                            </div>
+                            <div class="brain-level-box">
+                                <b class="brain-high">High</b><br>
+                                Too much pressure. Take a 5–10 minute break and breathe.
+                            </div>
+                        </div>
+
+                        <div class="today-progress-text">
+                            Today you finished <b>9 tasks</b> and have <b>3 left</b>.
+                        </div>
+                        <div class="today-progress-bar">
+                            <div class="today-progress-fill"></div>
+                        </div>
+
+                        <div class="brain-tips-title">Brain care tips for today:</div>
+                        <div class="brain-tips-list">
+                            <div class="brain-tips-item"><span>•</span> 5 min eye break after every 45 min study.</div>
+                            <div class="brain-tips-item"><span>•</span> Drink water before starting each deep session.</div>
+                            <div class="brain-tips-item"><span>•</span> Avoid phone in the last 30 minutes before sleep.</div>
+                        </div>
+                    </div>
+
+                    <div class="consistency-box">
+                        <div class="brain-title">Consistency Graph (7 days)</div>
+                        <div class="card-sub">Higher bar = more completed tasks</div>
+
+                        <div class="consistency-bars">
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 40%;"></div>
+                            </div>
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 70%;"></div>
+                            </div>
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 55%;"></div>
+                            </div>
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 85%;"></div>
+                            </div>
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 65%;"></div>
+                            </div>
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 95%;"></div>
+                            </div>
+                            <div class="consistency-bar">
+                                <div class="consistency-fill" style="height: 50%;"></div>
+                            </div>
+                        </div>
+
+                        <div class="consistency-labels">
+                            <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Reflection & Notes</div>
+                        <div class="card-sub">End-of-day quick summary</div>
+                    </div>
+                    <div class="tag">Review</div>
+                </div>
+                <div class="reflection-text">
+                    Imagine you are writing here every night: what did you learn,
+                    where did you waste time, and what will you improve tomorrow?
+                </div>
+                <div class="reflection-box">
+                    Example:<br>
+                    • Understood pointers better in C.<br>
+                    • Solved 4 DSA questions myself.<br>
+                    • Wasted 30 min on reels at 4 PM – avoid that time slot tomorrow.
+                </div>
+            </div>
+        </div>
+
+     
+        <div class="column" id="analytics">
+            
+            <div class="card">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Time Usage (Pie Chart Style)</div>
+                        <div class="card-sub">Where your hours went today</div>
+                    </div>
+                    <div class="tag">Overview</div>
+                </div>
+
+                <div class="pie-row">
+                    <div class="pie-circle-box">
+                        <div class="pie-circle">
+                            Imagine this as<br>your time pie
+                        </div>
+                    </div>
+
+                    <div class="pie-legend-box">
+                        <div class="pie-item">
+                            <div class="pie-item-left">
+                                <div class="pie-color pie-color-study"></div>
+                                <div>
+                                    <div class="pie-label-main">Study Apps</div>
+                                    <div class="pie-label-sub">Notes • IDE • PDFs</div>
+                                </div>
+                            </div>
+                            <div class="pie-duration">3h 10m</div>
+                        </div>
+
+                        <div class="pie-item">
+                            <div class="pie-item-left">
+                                <div class="pie-color pie-color-browser"></div>
+                                <div>
+                                    <div class="pie-label-main">Browser</div>
+                                    <div class="pie-label-sub">Docs • Tutorials</div>
+                                </div>
+                            </div>
+                            <div class="pie-duration">2h 05m</div>
+                        </div>
+
+                        <div class="pie-item">
+                            <div class="pie-item-left">
+                                <div class="pie-color pie-color-entertain"></div>
+                                <div>
+                                    <div class="pie-label-main">Entertainment</div>
+                                    <div class="pie-label-sub">Reels • Games</div>
+                                </div>
+                            </div>
+                            <div class="pie-duration">1h 00m</div>
+                        </div>
+
+                        <div class="pie-item">
+                            <div class="pie-item-left">
+                                <div class="pie-color pie-color-misc"></div>
+                                <div>
+                                    <div class="pie-label-main">Others</div>
+                                    <div class="pie-label-sub">Chats • Random</div>
+                                </div>
+                            </div>
+                            <div class="pie-duration">45m</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="essentials-list">
+                    <div class="essentials-item">
+                        <span>•</span> Study slice should be the biggest part most days.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Check this once at night to reflect.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Reduce red (Others) slowly, week by week.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Ask: “Would I repeat this same day again?”.
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="card">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Study Goals vs Reality</div>
+                        <div class="card-sub">Target vs actual for today</div>
+                    </div>
+                    <div class="tag">Compare</div>
+                </div>
+
+                <table class="goals-table">
+                    <thead>
+                    <tr>
+                        <th>Area</th>
+                        <th>Target</th>
+                        <th>Actual</th>
+                        <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Core Study</td>
+                        <td>4 hours</td>
+                        <td>3h 10m</td>
+                        <td class="goals-label-okay">Almost there</td>
+                    </tr>
+                    <tr>
+                        <td>DSA Practice</td>
+                        <td>10 questions</td>
+                        <td>6 questions</td>
+                        <td class="goals-label-low">Push more</td>
+                    </tr>
+                    <tr>
+                        <td>Reels / Games</td>
+                        <td>&lt; 45 minutes</td>
+                        <td>1 hour</td>
+                        <td class="goals-label-low">Cut down</td>
+                    </tr>
+                    <tr>
+                        <td>Sleep</td>
+                        <td>7+ hours</td>
+                        <td>Planned: 11 PM</td>
+                        <td class="goals-label-okay">On track</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            
+            <div class="card">
+                <div class="card-title-row">
+                    <div>
+                        <div class="card-title">Essentials of this Royal Dashboard</div>
+                        <div class="card-sub">Built with only simple HTML + CSS</div>
+                    </div>
+                    <div class="tag">Simple</div>
+                </div>
+
+                <div class="essentials-list">
+                    <div class="essentials-item">
+                        <span>•</span> Dark navy background + gold accent = royal feel.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Rounded cards with soft shadow for clean look.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Clear sections: timer, tasks, brain, analytics.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Only basic CSS: colors, padding, flex, border-radius.
+                    </div>
+                    <div class="essentials-item">
+                        <span>•</span> Easy to understand and edit for a beginner.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="footer">
+        Rules of this dashboard: <span>1)</span> Plan in the morning. <span>2)</span> Review at night.
+        <span>3)</span> Improve just 1% every day.
+    </div>
+</div>
+
+</body>
+</html>
